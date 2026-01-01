@@ -3,21 +3,24 @@
   command = ""
   publish = "."
 
-# IMPORTANT: Googlebot often tries HTTP first, so we need to handle HTTP → HTTPS → New Domain
-# Redirect HTTP to HTTPS first (same domain)
+# IMPORTANT: Googlebot tries HTTP first!
+# Direct redirects (HTTP and HTTPS) to new domain (fewer redirect hops = better)
+# This ensures Google can fetch the page and see the 301 redirect
+
+# Redirect HTTP directly to new domain (301 permanent)
 [[redirects]]
   from = "http://greececyclades.com/*"
-  to = "https://greececyclades.com/:splat"
+  to = "https://discovercyclades.gr/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://www.greececyclades.com/*"
-  to = "https://www.greececyclades.com/:splat"
+  to = "https://discovercyclades.gr/:splat"
   status = 301
   force = true
 
-# Then redirect HTTPS to new domain
+# Redirect HTTPS to new domain (301 permanent)
 [[redirects]]
   from = "https://greececyclades.com/*"
   to = "https://discovercyclades.gr/:splat"

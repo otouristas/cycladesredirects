@@ -1,12 +1,10 @@
 # Netlify _redirects file
 # Redirects greececyclades.com to discovercyclades.gr
-# IMPORTANT: Googlebot tries HTTP first, so handle HTTP → HTTPS → New Domain
+# IMPORTANT: Googlebot tries HTTP first! Direct redirects (fewer hops = better)
 
-# Step 1: Redirect HTTP to HTTPS (same domain)
-http://greececyclades.com/*    https://greececyclades.com/:splat    301!
-http://www.greececyclades.com/*    https://www.greececyclades.com/:splat    301!
-
-# Step 2: Redirect HTTPS to new domain
+# Direct redirects to new domain (301 permanent)
+http://greececyclades.com/*    https://discovercyclades.gr/:splat    301!
 https://greececyclades.com/*   https://discovercyclades.gr/:splat    301!
+http://www.greececyclades.com/*    https://discovercyclades.gr/:splat    301!
 https://www.greececyclades.com/*   https://discovercyclades.gr/:splat    301!
 
