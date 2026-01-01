@@ -1,0 +1,15 @@
+# Apache .htaccess file for 301 redirects
+# Redirects greececyclades.com to discovercyclades.gr
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Force HTTPS first (optional but recommended)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect entire domain to new domain (301 permanent)
+# Preserves path, query string, and hash
+RewriteCond %{HTTP_HOST} ^(www\.)?greececyclades\.com$ [NC]
+RewriteRule ^(.*)$ https://discovercyclades.gr/$1 [L,R=301]
+

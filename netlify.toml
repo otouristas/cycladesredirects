@@ -1,0 +1,28 @@
+[build]
+  publish = "."
+
+# Domain redirects: redirect greececyclades.com to discovercyclades.gr (301 permanent)
+[[redirects]]
+  from = "http://greececyclades.com/*"
+  to = "https://discovercyclades.gr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://greececyclades.com/*"
+  to = "https://discovercyclades.gr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.greececyclades.com/*"
+  to = "https://discovercyclades.gr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.greececyclades.com/*"
+  to = "https://discovercyclades.gr/:splat"
+  status = 301
+  force = true
+

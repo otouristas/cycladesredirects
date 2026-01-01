@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Discover Cyclades</title>
+    
+    <!-- Canonical URL pointing to new domain -->
+    <link rel="canonical" href="https://discovercyclades.gr/">
+    
+    <!-- Meta refresh redirect (immediate, 0 seconds) -->
+    <meta http-equiv="refresh" content="0; url=https://discovercyclades.gr/">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:url" content="https://discovercyclades.gr/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discover Cyclades - Greek Islands Travel Platform">
+    
+    <script>
+        // JavaScript redirect (handles path preservation)
+        (function() {
+            // Get current path, query string, and hash
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+            
+            // Build new URL preserving everything
+            var newUrl = 'https://discovercyclades.gr' + path + search + hash;
+            
+            // Immediate redirect (301 equivalent via JavaScript)
+            window.location.replace(newUrl);
+        })();
+    </script>
+    
+    <!-- Fallback link for users/bots without JavaScript -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://discovercyclades.gr/">
+    </noscript>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; text-align: center; padding: 50px; max-width: 600px; margin: 100px auto;">
+        <h1>Redirecting...</h1>
+        <p>You are being redirected to <strong>Discover Cyclades</strong>.</p>
+        <p>If you are not redirected automatically, please click the link below:</p>
+        <p><a href="https://discovercyclades.gr/" style="color: #0066cc; font-size: 18px; text-decoration: none;">Go to Discover Cyclades →</a></p>
+    </div>
+</body>
+</html>
+
