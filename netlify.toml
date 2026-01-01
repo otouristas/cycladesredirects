@@ -1,4 +1,6 @@
 [build]
+  # No build step needed - this is a static HTML site
+  command = ""
   publish = "."
 
 # Domain redirects: redirect greececyclades.com to discovercyclades.gr (301 permanent)
