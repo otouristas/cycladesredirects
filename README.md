@@ -18,9 +18,13 @@ This is a minimal redirect site that can be deployed separately to handle 301 re
 ### Option 1: Netlify (Recommended)
 
 1. Connect this repository to Netlify
-2. Set publish directory to root (`.`)
+2. **Build settings:**
+   - Build command: Leave empty (or `echo "no build"`)
+   - Publish directory: `.` (root)
 3. Add `greececyclades.com` as a custom domain
 4. Deploy - redirects will work automatically
+
+**Note:** This is a static HTML site with no build step required.
 
 ### Option 2: Apache Server
 
