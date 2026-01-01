@@ -1,0 +1,7 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap (if you have one)
+# Sitemap: https://discovercyclades.gr/sitemap.xml
+

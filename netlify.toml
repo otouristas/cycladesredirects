@@ -3,21 +3,23 @@
   command = ""
   publish = "."
 
-# Domain redirects: redirect greececyclades.com to discovercyclades.gr (301 permanent)
+# IMPORTANT: Googlebot often tries HTTP first, so we need to handle HTTP → HTTPS → New Domain
+# Redirect HTTP to HTTPS first (same domain)
 [[redirects]]
   from = "http://greececyclades.com/*"
-  to = "https://discovercyclades.gr/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://greececyclades.com/*"
-  to = "https://discovercyclades.gr/:splat"
+  to = "https://greececyclades.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://www.greececyclades.com/*"
+  to = "https://www.greececyclades.com/:splat"
+  status = 301
+  force = true
+
+# Then redirect HTTPS to new domain
+[[redirects]]
+  from = "https://greececyclades.com/*"
   to = "https://discovercyclades.gr/:splat"
   status = 301
   force = true
